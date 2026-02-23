@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&display=swap');
+
+:root {
+  --bg: #0a0f1a;
+  --panel: rgba(8, 14, 28, 0.8);
+  --line: rgba(144, 163, 196, 0.28);
+  --text: #e8edf8;
+  --muted: #9ca8c4;
+  --course: #1f4fa4;
+  --tp: #b96800;
+  --lang: #356c34;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, #263f75 0%, transparent 34%),
+    radial-gradient(circle at 85% 0%, #6b2c2c 0%, transparent 25%),
+    var(--bg);
+}
+
+#app {
+  padding: 2rem 1rem 3rem;
+}
+
+.board {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 1.2rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #9ad4ff;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+h1,
+h2 {
+  font-family: 'Archivo', sans-serif;
+}
+
+h1 {
+  margin: 0.25rem 0 0;
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+}
+
+.sub {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.panel {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 1rem;
+  margin-top: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.08rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+th,
+td {
+  border: 1px solid var(--line);
+  padding: 0.65rem 0.6rem;
+  vertical-align: top;
+}
+
+th {
+  background: rgba(80, 109, 165, 0.2);
+  text-align: left;
+}
+
+td strong {
+  display: block;
+  line-height: 1.2;
+}
+
+td span,
+td small {
+  display: block;
+  margin-top: 0.25rem;
+  color: #d2ddf7;
+}
+
+.type-course {
+  background: color-mix(in oklab, var(--course) 62%, transparent);
+}
+
+.type-tp {
+  background: color-mix(in oklab, var(--tp) 60%, transparent);
+}
+
+.type-language {
+  background: color-mix(in oklab, var(--lang) 58%, transparent);
+}
+
+.empty {
+  color: #8694b7;
+}
+
+.summary-table {
+  min-width: 640px;
+}
+
+@media (max-width: 700px) {
+  #app {
+    padding: 1rem 0.5rem 2rem;
+  }
+
+  .panel {
+    padding: 0.8rem;
+  }
+}
