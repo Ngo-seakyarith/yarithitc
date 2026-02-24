@@ -1,7 +1,7 @@
 import './style.css'
 
 type Day = 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday'
-type SessionType = 'Course' | 'TP' | 'Language'
+type SessionType = 'Course' | 'TP' | 'TD' | 'Language'
 
 type Session = {
   day: Day
@@ -72,29 +72,29 @@ const schedules: Schedule[] = [
     tabLabel: 'Cheab',
     eyebrow: 'Semester II • Group I4A2-Meca',
     sessions: [
-      { day: 'Monday', time: '8h00-8h55', subject: 'Refrig. and Air Cond. I', teacher: 'Mr. UN AMATA', className: 'J-208', type: 'TP', audience: 'Group A' },
-      { day: 'Monday', time: '9h10-10h05', subject: 'Refrig. and Air Cond. I', teacher: 'Mr. UN AMATA', className: 'J-208', type: 'TP', audience: 'Group A' },
-      { day: 'Monday', time: '10h10-11h05', subject: 'Refrig. and Air Cond. I', teacher: 'Mr. UN AMATA', className: 'J-208', type: 'TP', audience: 'Group A' },
-      { day: 'Monday', time: '13h00-13h55', subject: 'Turbomachines', teacher: 'Mr. DARA SEYHAK', className: 'I-206', type: 'TP', audience: 'Group A' },
-      { day: 'Monday', time: '14h00-14h55', subject: 'Turbomachines', teacher: 'Mr. DARA SEYHAK', className: 'I-206', type: 'TP', audience: 'Group A' },
+      { day: 'Monday', time: '8h00-8h55', subject: 'Refrig. and Air Cond. I', teacher: 'Mr. UN AMATA', className: 'J-208', type: 'TD', audience: 'Group A' },
+      { day: 'Monday', time: '9h10-10h05', subject: 'Refrig. and Air Cond. I', teacher: 'Mr. UN AMATA', className: 'J-208', type: 'TD', audience: 'Group A' },
+      { day: 'Monday', time: '10h10-11h05', subject: 'Refrig. and Air Cond. I', teacher: 'Mr. UN AMATA', className: 'J-208', type: 'TD', audience: 'Group A' },
+      { day: 'Monday', time: '13h00-13h55', subject: 'Turbomachines', teacher: 'Mr. DARA SEYHAK', className: 'I-206', type: 'TD', audience: 'Group A' },
+      { day: 'Monday', time: '14h00-14h55', subject: 'Turbomachines', teacher: 'Mr. DARA SEYHAK', className: 'I-206', type: 'TD', audience: 'Group A' },
       { day: 'Monday', time: '15h10-16h05', subject: 'English VI', teacher: 'N/A', className: 'N/A', type: 'Language', audience: 'Group A' },
       { day: 'Monday', time: '16h10-17h05', subject: 'English VI', teacher: 'N/A', className: 'N/A', type: 'Language', audience: 'Group A' },
-      { day: 'Tuesday', time: '7h00-7h55', subject: 'Heat Exchangers', teacher: 'Dr. KINNALETH VONGCHANH', className: 'I-206', type: 'TP', audience: 'Group A' },
-      { day: 'Tuesday', time: '8h00-8h55', subject: 'Heat Exchangers', teacher: 'Dr. KINNALETH VONGCHANH', className: 'I-206', type: 'TP', audience: 'Group A' },
-      { day: 'Tuesday', time: '9h10-10h05', subject: 'Finite Elements', teacher: 'Dr. CHHITH SAOSOMETH', className: 'I-206', type: 'TP', audience: 'Group A' },
-      { day: 'Tuesday', time: '10h10-11h05', subject: 'Finite Elements', teacher: 'Dr. CHHITH SAOSOMETH', className: 'I-206', type: 'TP', audience: 'Group A' },
+      { day: 'Tuesday', time: '7h00-7h55', subject: 'Heat Exchangers', teacher: 'Dr. KINNALETH VONGCHANH', className: 'I-206', type: 'TD', audience: 'Group A' },
+      { day: 'Tuesday', time: '8h00-8h55', subject: 'Heat Exchangers', teacher: 'Dr. KINNALETH VONGCHANH', className: 'I-206', type: 'TD', audience: 'Group A' },
+      { day: 'Tuesday', time: '9h10-10h05', subject: 'Finite Elements', teacher: 'Dr. CHHITH SAOSOMETH', className: 'I-206', type: 'TD', audience: 'Group A' },
+      { day: 'Tuesday', time: '10h10-11h05', subject: 'Finite Elements', teacher: 'Dr. CHHITH SAOSOMETH', className: 'I-206', type: 'TD', audience: 'Group A' },
       { day: 'Tuesday', time: '13h00-13h55', subject: 'Internal Combustion Engines', teacher: 'Mr. SAN SOPHAK', className: 'E-201', type: 'Course', audience: 'All' },
       { day: 'Tuesday', time: '14h00-14h55', subject: 'Internal Combustion Engines', teacher: 'Mr. SAN SOPHAK', className: 'E-201', type: 'Course', audience: 'All' },
       { day: 'Wednesday', time: '7h00-7h55', subject: 'Numerical Method', teacher: 'Mr. KEO CHIVORN', className: 'J-702', type: 'Course', audience: 'All' },
       { day: 'Wednesday', time: '8h00-8h55', subject: 'Numerical Method', teacher: 'Mr. KEO CHIVORN', className: 'J-702', type: 'Course', audience: 'All' },
       { day: 'Wednesday', time: '9h10-10h05', subject: 'Mechanical Constructions', teacher: 'Dr. SRANG SAROT', className: 'J-701', type: 'Course', audience: 'All' },
       { day: 'Wednesday', time: '10h10-11h05', subject: 'Mechanical Constructions', teacher: 'Dr. SRANG SAROT', className: 'J-701', type: 'Course', audience: 'All' },
-      { day: 'Thursday', time: '7h00-7h55', subject: 'Mechanical Constructions', teacher: 'Dr. SRANG SAROT', className: 'I-206', type: 'TP', audience: 'Group A' },
-      { day: 'Thursday', time: '8h00-8h55', subject: 'Mechanical Constructions', teacher: 'Dr. SRANG SAROT', className: 'I-206', type: 'TP', audience: 'Group A' },
+      { day: 'Thursday', time: '7h00-7h55', subject: 'Mechanical Constructions', teacher: 'Dr. SRANG SAROT', className: 'I-206', type: 'TD', audience: 'Group A' },
+      { day: 'Thursday', time: '8h00-8h55', subject: 'Mechanical Constructions', teacher: 'Dr. SRANG SAROT', className: 'I-206', type: 'TD', audience: 'Group A' },
       { day: 'Thursday', time: '9h10-10h05', subject: 'French VIII', teacher: 'N/A', className: 'Groups 08-12', type: 'Language', audience: 'Group A' },
       { day: 'Thursday', time: '10h10-11h05', subject: 'French VIII', teacher: 'N/A', className: 'Groups 08-12', type: 'Language', audience: 'Group A' },
-      { day: 'Thursday', time: '13h00-13h55', subject: 'Numerical Method', teacher: 'Mr. KEO CHIVORN', className: 'E-201', type: 'TP', audience: 'Group A' },
-      { day: 'Thursday', time: '14h00-14h55', subject: 'Numerical Method', teacher: 'Mr. KEO CHIVORN', className: 'E-201', type: 'TP', audience: 'Group A' },
+      { day: 'Thursday', time: '13h00-13h55', subject: 'Numerical Method', teacher: 'Mr. KEO CHIVORN', className: 'E-201', type: 'TD', audience: 'Group A' },
+      { day: 'Thursday', time: '14h00-14h55', subject: 'Numerical Method', teacher: 'Mr. KEO CHIVORN', className: 'E-201', type: 'TD', audience: 'Group A' },
       { day: 'Friday', time: '7h00-7h55', subject: 'Turbomachines', teacher: 'Mr. DARA SEYHAK', className: 'E-204', type: 'Course', audience: 'All' },
       { day: 'Friday', time: '8h00-8h55', subject: 'Turbomachines', teacher: 'Mr. DARA SEYHAK', className: 'E-204', type: 'Course', audience: 'All' },
     ],
@@ -146,6 +146,7 @@ const schedules: Schedule[] = [
 const typeClass: Record<SessionType, string> = {
   Course: 'type-course',
   TP: 'type-tp',
+  TD: 'type-tp',
   Language: 'type-language',
 }
 
@@ -191,6 +192,7 @@ function renderSchedule(schedule: Schedule): string {
         <div class="legend">
           <span class="legend-item"><span class="legend-color type-course"></span> Course</span>
           <span class="legend-item"><span class="legend-color type-tp"></span> TP</span>
+          <span class="legend-item"><span class="legend-color type-tp"></span> TD</span>
           <span class="legend-item"><span class="legend-color type-language"></span> Language</span>
         </div>
       </header>
