@@ -43,8 +43,8 @@ const schedules: Schedule[] = [
       { day: 'Monday', time: '10h10-11h05', subject: 'Data Visualization', teacher: 'Dr. PHAUK Sokkhey', className: 'F404', type: 'Course' },
       { day: 'Monday', time: '13h00-13h55', subject: 'Economic for Engineers', teacher: 'Mr. TOUCH Sopheak', className: 'F404', type: 'Course' },
       { day: 'Monday', time: '14h00-14h55', subject: 'Economic for Engineers', teacher: 'Mr. TOUCH Sopheak', className: 'F404', type: 'Course' },
-      { day: 'Monday', time: '15h10-16h05', subject: 'Anglais', teacher: 'N/A', className: 'I503', type: 'Language' },
-      { day: 'Monday', time: '16h10-17h05', subject: 'Anglais', teacher: 'N/A', className: 'I503', type: 'Language' },
+      { day: 'Monday', time: '15h10-16h05', subject: 'Anglais', teacher: 'Heang Leakena', className: 'I503', type: 'Language' },
+      { day: 'Monday', time: '16h10-17h05', subject: 'Anglais', teacher: 'Heang Leakena', className: 'I503', type: 'Language' },
       { day: 'Tuesday', time: '7h00-7h55', subject: 'Database Design and Admin', teacher: 'Mr. NGIN Kmlong', className: 'F404', type: 'Course' },
       { day: 'Tuesday', time: '8h00-8h55', subject: 'Database Design and Admin', teacher: 'Mr. NGIN Kmlong', className: 'F404', type: 'Course' },
       { day: 'Tuesday', time: '9h10-10h05', subject: 'Data Engineering', teacher: 'Mr. NGIN Kmlong', className: 'F404', type: 'Course' },
@@ -162,13 +162,13 @@ function renderTableRows(sessions: Session[]): string {
             <td class="${typeClass[session.type]}">
               <strong>${session.subject}</strong>
               <span>${session.teacher}</span>
-              <small>${session.className} • ${session.type}${session.audience ? ` • ${session.audience}` : ''}</small>
+              <small>${session.type} • ${session.className}${session.audience ? ` • ${session.audience}` : ''}</small>
             </td>
           `
         })
         .join('')
 
-      return `<tr><th>${time}</th>${dayCells}</tr>`
+      return `<tr><th class="time-cell">${time}</th>${dayCells}</tr>`
     })
     .join('')
 }
@@ -183,21 +183,29 @@ function renderSchedule(schedule: Schedule): string {
 
   return `
     <main class="board">
-      <header>
-        <p class="eyebrow">${schedule.eyebrow}</p>
-        <h1>Class Schedule</h1>
+      <header class="board-header">
+        <div>
+          <p class="eyebrow">${schedule.eyebrow}</p>
+          <h1>Class Schedule</h1>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="legend-color type-course"></span> Course</span>
+          <span class="legend-item"><span class="legend-color type-tp"></span> TP</span>
+          <span class="legend-item"><span class="legend-color type-language"></span> Language</span>
+        </div>
       </header>
 
       <section class="panel">
-        <div class="tabs" role="tablist" aria-label="Schedule switcher">
-          ${tabButtons}
+        <div class="panel-header">
+          <div class="tabs" role="tablist" aria-label="Schedule switcher">
+            ${tabButtons}
+          </div>
         </div>
-        <h2>Weekly Grid</h2>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>Time</th>
+                <th class="time-col">Time</th>
                 <th>Monday</th>
                 <th>Tuesday</th>
                 <th>Wednesday</th>
