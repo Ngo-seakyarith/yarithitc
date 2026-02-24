@@ -70,7 +70,7 @@ const schedules: Schedule[] = [
   {
     key: 'friend',
     tabLabel: 'Cheab',
-    eyebrow: 'Semester I • Group I4A2-Meca',
+    eyebrow: 'Semester II • Group I4A2-Meca',
     sessions: [
       { day: 'Monday', time: '8h00-8h55', subject: 'Refrig. and Air Cond. I', teacher: 'Mr. UN AMATA', className: 'J-208', type: 'TP', audience: 'Group A' },
       { day: 'Monday', time: '9h10-10h05', subject: 'Refrig. and Air Cond. I', teacher: 'Mr. UN AMATA', className: 'J-208', type: 'TP', audience: 'Group A' },
